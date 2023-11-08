@@ -1,7 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
-import { Home } from './routes/home/home.component';
+import { Directory } from '../../components/directory/directory.component';
 
-const App = () => {
+export const Home = () => {
   const categories = [
     {
       id: 1,
@@ -30,11 +29,5 @@ const App = () => {
     },
   ];
 
-  return (
-    <Routes>
-      <Route path='/' element={<Home />} />
-    </Routes>
-  );
+  return <Directory categories={categories} />;
 };
-
-export default App;
